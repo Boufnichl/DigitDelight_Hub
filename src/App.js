@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import {Switch,Route} from "react-router-dom";
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,7 +12,8 @@ import Modal from './components/Modal';
 
 function App() {
   return (
-    <React.Fragment>
+    <Router basename={process.env.PUBLIC_URL}>
+      <React.Fragment>
       <Navbar />
       <Switch>
         <Route exact path="/" component={ProductList} />
@@ -21,6 +23,7 @@ function App() {
       </Switch>
       <Modal />
     </React.Fragment>
+    </Router>
   );
 }
 
