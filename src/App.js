@@ -12,7 +12,6 @@ import Modal from './components/Modal';
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
       <React.Fragment>
       <Navbar />
       <Switch>
@@ -23,7 +22,6 @@ function App() {
       </Switch>
       <Modal />
     </React.Fragment>
-    </Router>
   );
 }
 
